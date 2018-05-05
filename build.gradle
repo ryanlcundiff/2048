@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+defaultTasks 'run'
+
+sourceCompatibility = 1.8
+mainClassName = "2048.Main"
+applicationName = "2048"
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'resources'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+}
