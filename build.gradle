@@ -4,8 +4,8 @@ apply plugin: 'application'
 defaultTasks 'run'
 
 sourceCompatibility = 1.8
-mainClassName = "2048.Main"
-applicationName = "2048"
+mainClassName = "litcode.lit2048.Main"
+applicationName = "lit2048"
 
 sourceSets {
     main {
