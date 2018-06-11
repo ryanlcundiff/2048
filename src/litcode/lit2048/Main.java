@@ -4,6 +4,8 @@ public class Main
 {
   public static void main(String[] args)
   {
-    System.out.println("a string");
+    ModelLit2048 model = new ModelLit2048();
+    ViewLit2048 view = new ViewLit2048();
+    view.display(model);
   }
 }
