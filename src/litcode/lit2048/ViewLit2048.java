@@ -12,10 +12,31 @@ public class ViewLit2048
   public ViewLit2048()
   {}
 
-  public void display(ModelLit2048 model)
+  public void displayBoard(ModelLit2048 model)
   {
-    System.out.println(TOP_LEFT_CORNER+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+TOP_RIGHT_CORNER);
-    System.out.println(UP_AND_DOWN_LINE+" "+"4"+" "+" "+UP_AND_DOWN_LINE);
-    System.out.println(BOTTOM_LEFT_CORNER+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+BOTTOM_RIGHT_CORNER);
+    for (int i=0; i<4; i++) {
+      displayRow();
+    }
+
+  }
+
+  public void displayRow (){
+
+
+
+    for (int i=0; i<4; i++) {
+      System.out.print(TOP_LEFT_CORNER+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+TOP_RIGHT_CORNER);
+
+    }
+    System.out.println("");
+    for (int i=0; i<4; i++) {
+      System.out.print(UP_AND_DOWN_LINE+" "+"4"+" "+" "+UP_AND_DOWN_LINE);
+
+    }
+    System.out.println("");
+    for (int i=0; i<4; i++) {
+      System.out.print(BOTTOM_LEFT_CORNER+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+BOTTOM_RIGHT_CORNER);
+    }
+    System.out.println("");
   }
 }

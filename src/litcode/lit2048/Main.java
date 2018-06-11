@@ -6,6 +6,6 @@ public class Main
   {
     ModelLit2048 model = new ModelLit2048();
     ViewLit2048 view = new ViewLit2048();
-    view.display(model);
+    view.displayBoard(model);
   }
 }
