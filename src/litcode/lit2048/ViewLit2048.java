@@ -14,27 +14,29 @@ public class ViewLit2048
 
   public void displayBoard(ModelLit2048 model)
   {
-    for (int i=0; i<4; i++) {
-      displayRow();
+    for (int i=0; i<model.numberOfRows(); i++) {
+      displayRow(model.row(i));
     }
 
   }
 
-  public void displayRow (){
+  public void displayRow (int[] row){
 
 
 
-    for (int i=0; i<4; i++) {
+    for (int i=0; i<row.length; i++) {
       System.out.print(TOP_LEFT_CORNER+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+TOP_RIGHT_CORNER);
 
     }
     System.out.println("");
-    for (int i=0; i<4; i++) {
-      System.out.print(UP_AND_DOWN_LINE+" "+"4"+" "+" "+UP_AND_DOWN_LINE);
+    for (int i=0; i<row.length; i++) {
+      System.out.print(UP_AND_DOWN_LINE);
+      System.out.print(row[i]);
+      System.out.print(UP_AND_DOWN_LINE);
 
     }
     System.out.println("");
-    for (int i=0; i<4; i++) {
+    for (int i=0; i<row.length; i++) {
       System.out.print(BOTTOM_LEFT_CORNER+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+SIDE_TO_SIDE_LINE+BOTTOM_RIGHT_CORNER);
     }
     System.out.println("");
