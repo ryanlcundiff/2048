@@ -32,7 +32,14 @@ public class ViewLit2048
     for (int i=0; i<row.length; i++) {
       System.out.print(UP_AND_DOWN_LINE);
       System.out.print (" "+" "+" ");
-      System.out.print(row[i]);
+      if (row[i]==0)
+      {
+        System.out.print(" ");
+      }
+      else
+      {
+        System.out.print(row[i]);
+      }
       System.out.print(UP_AND_DOWN_LINE);
 
     }
