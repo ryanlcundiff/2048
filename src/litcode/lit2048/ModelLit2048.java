@@ -18,6 +18,10 @@ public class ModelLit2048
     placeRandomTile();
     view.displayBoard(this);
   }
+  public void move(int move)
+  {
+    //we need to make this work
+  }
 
   public boolean gameOver()
   {
@@ -50,15 +54,15 @@ public class ModelLit2048
 
   private int newNumber()
   {
-    int randomNumber=random.nextInt(10);
+    int randomNumber=random.nextInt(100);
 
-    if(randomNumber < 6 )
+    if(randomNumber < 99 )
     {
       return 2;
     }
   else
     {
-      return 4;
+      return 1024;
     }
     }
 

@@ -10,7 +10,9 @@ public class ViewLit2048
   private static String SIDE_TO_SIDE_LINE = "\u2501";
 
   public ViewLit2048()
-  {}
+  {
+
+  }
 
   public void displayBoard(ModelLit2048 model)
   {

@@ -1,7 +1,7 @@
 package litcode.lit2048;
 
 import java.io.IOException;
-import java.util.Scanner;
+
 
 public class Main
 {
@@ -9,13 +9,13 @@ public class Main
   {
     ViewLit2048 view = new ViewLit2048();
     ModelLit2048 model = new ModelLit2048(view);
+    MoveInput input = new MoveInput();
     while (!model.gameOver())
     {
-      Scanner s = new Scanner(System.in);
-
-      System.out.print("ENTER YOUR MOVE");
-      //String move = s.next();
-      //System.out.println("MOVE: " + move);
+      //ask for next move
+      int move = input.nextMove();
+      //executes the move
+      model.move(move);
     }
   }
 }
