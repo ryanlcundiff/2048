@@ -1,0 +1,2 @@
+#! /bin/sh
+build/install/lit2048/bin/lit2048

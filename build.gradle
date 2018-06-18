@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-defaultTasks 'run'
+defaultTasks 'installDist'
 
 sourceCompatibility = 1.8
 mainClassName = "litcode.lit2048.Main"
@@ -23,7 +23,6 @@ repositories {
 }
 
 dependencies {
-
 }
 
 task wrapper(type: Wrapper) {

@@ -1,6 +1,5 @@
 package litcode.lit2048;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class ModelLit2048
@@ -18,9 +17,11 @@ public class ModelLit2048
     placeRandomTile();
     view.displayBoard(this);
   }
-  public void move(int move)
+  public void move(PossibleMoves move)
   {
     //we need to make this work
+    placeRandomTile();
+    view.displayBoard(this);
   }
 
   public boolean gameOver()
@@ -54,15 +55,15 @@ public class ModelLit2048
 
   private int newNumber()
   {
-    int randomNumber=random.nextInt(100);
+    int randomNumber=random.nextInt(10);
 
-    if(randomNumber < 99 )
+    if(randomNumber <6 )
     {
       return 2;
     }
   else
     {
-      return 1024;
+      return 4;
     }
     }
 
