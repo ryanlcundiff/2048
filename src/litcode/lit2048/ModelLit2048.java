@@ -3,7 +3,9 @@ package litcode.lit2048;
 import java.util.Random;
 
 public class ModelLit2048
+
 {
+  private boolean quit;
   private Random random;
   private int[][] array2d;
   private ViewLit2048 view;
@@ -11,6 +13,7 @@ public class ModelLit2048
   public ModelLit2048(ViewLit2048 view)
   {
     this.view=view;
+    quit = false;
     random=new Random();
     array2d=new int[4][4];
     placeRandomTile();
@@ -19,6 +22,11 @@ public class ModelLit2048
   }
   public void move(PossibleMoves move)
   {
+    if (move == PossibleMoves.Quit)
+    {
+      quit = true;
+      return;
+    }
     //we need to make this work
     placeRandomTile();
     view.displayBoard(this);
@@ -26,7 +34,7 @@ public class ModelLit2048
 
   public boolean gameOver()
   {
-    return false;
+    return quit;
 
   }
   public int numberOfRows()
