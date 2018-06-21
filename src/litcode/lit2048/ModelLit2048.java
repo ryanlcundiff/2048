@@ -26,6 +26,7 @@ public class ModelLit2048
     if (move == PossibleMoves.Quit)
     {
       quit = true;
+      System.out.println("GOODBYE");
       return;
     }
     //we need to make this work
@@ -67,9 +68,24 @@ public class ModelLit2048
     }
   }
 
+  protected boolean boardFull()
+  {
+    for (int i=0; i<numberOfRows(); i++)
+    {
+      for (int j=0; j<row(i).length; j++)
+      {
+        if (array2d[i][j] == 0)
+        {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
   public boolean gameOver()
   {
-    return quit;
+    return quit || boardFull();
 
   }
   public int numberOfRows()
