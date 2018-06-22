@@ -68,6 +68,24 @@ public class ModelLit2048
     }
   }
 
+  protected void rotate()
+  {
+    int[][] array2dx2 = new int[4][4];
+
+    for (int i=0; i<numberOfRows(); i++)
+    {
+      for (int j = 0; j < row(i).length; j++)
+      {
+        array2dx2[3-j][i] = array2d[i][j];
+      }
+
+
+    }
+    array2d = array2dx2;
+  }
+
+
+
   protected boolean boardFull()
   {
     for (int i=0; i<numberOfRows(); i++)
