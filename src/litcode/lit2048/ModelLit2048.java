@@ -29,7 +29,43 @@ public class ModelLit2048
       System.out.println("GOODBYE");
       return;
     }
-    //we need to make this work
+    if (move == PossibleMoves.Up)
+    {
+      rotate();
+      moveLeft();
+      rotate();
+      rotate();
+      rotate();
+    }
+    if (move == PossibleMoves.Down)
+    {
+      rotate();
+      rotate();
+      rotate();
+      moveLeft();
+      rotate();
+    }
+    if (move == PossibleMoves.Left)
+    {
+      moveLeft();
+
+    }
+    if (move == PossibleMoves.Right)
+    {
+      rotate();
+      rotate();
+
+      moveLeft();
+      rotate();
+      rotate();
+    }
+
+    placeRandomTile();
+    view.displayBoard(this);
+  }
+
+  protected void moveLeft()
+  {
 
     for (int i=0; i<numberOfRows(); i++)
     {
@@ -37,8 +73,6 @@ public class ModelLit2048
       mergeRow(row(i));
       slideRow(row(i));
     }
-    placeRandomTile();
-    view.displayBoard(this);
   }
 
   private void slideRow(int[] row)

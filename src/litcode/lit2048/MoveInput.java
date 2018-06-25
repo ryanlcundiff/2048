@@ -6,7 +6,7 @@ public class MoveInput
   {
     do
     {
-      System.out.print("Enter Your Move(wasd): ");
+      System.out.print("Enter Your Move(WASD): ");
       String move = System.console().readLine();
       if (move.equals("w"))
       {
